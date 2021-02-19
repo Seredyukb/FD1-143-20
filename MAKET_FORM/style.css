@@ -1,4 +1,27 @@
-.lefttcol{
-    display: inline-block;
-    float:left;
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    border: solid red 1px;
+    padding: 5px;
+    margin: 5px;
+}
+.leftcol{
+    float: left;
+    width: 20%;
+}
+.rightcol{
+    float: right;
+    width: 80%;
+}
+.firstform{
+    width: 95%;
+}
+
+.clearfix{
+    clear: both;
+}
+textarea{
+width: 95%;
 }

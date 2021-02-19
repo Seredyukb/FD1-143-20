@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css" type="text/css">
     <title>Document</title>
 </head>
 
 <body>
-    <form class="container">
-        <h2>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</h2>
-        <div class="first">
-            <div class="leftcol">
-                <label for="">Название статьи:</label>
+    <form>
+        <div class="container">
+            <h2>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</h2>
+            <div class="first">
+                <div class="leftcol">
+                    <label for="">Название статьи:</label>
+                </div>
+                <div class="rightcol">
+                    <input class="firstform" type="text">
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="rightcol">
-                <input type="text">
+            <div class="second">
+                <div class="leftcol">
+                    <label for="">Рубрика:</label>
+                </div>
+                <div class="rightcol">
+                    <select name="" id="">
+                        <option value="">компьютерная техника</option>
+                        <option value="">графика и дизайн</option>
+                        <option value="">програмирование</option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
             </div>
-        </div>
-        <div class="second">
-            <div class="leftcol">
-                <label for="">Рубрика:</label>
+            <div class="third">
+                <div class="leftcol">
+                    <span>Публикация:</span>
+                </div>
+                <div class="rightcol">
+                    <input type="radio">
+                    <span>на сайте</span>
+                    <input type="radio">
+                    <span>в журнале</span>
+                    <input type="radio">
+                    <span>на сайте и в журнале</span>
+                </div>
+                <div class="clearfix"></div>
             </div>
-            <div class="rightcol">
-                <select name="" id="">
-                    <option value="">компьютерная техника</option>
-                    <option value="">графика и дизайн</option>
-                    <option value="">програмирование</option>
-                </select>
-            </div>
-        </div>
-        <div class="third">
-            <div class="leftcol">
-                <span>Публикация:</span>
-            </div>
-            <div class="rightcol">
-                <input type="radio">
-                <span>на сайте</span>
-                <input type="radio">
-                <span>в журнале</span>
-                <input type="radio">
-                <span>на сайте и в журнале</span>
-            </div>
-        </div>
-        <div class="forth">
-            <div class="leftcol">
+            <div>
+
                 <label for="">Разрешить комментарии:</label>
                 <input type="checkbox">
+
+                <div>
+                    <p>Текст статьи:</p>
+                    <textarea name="" id=""></textarea>
+                    <div>
+                        <input type="submit" value="Опубликовать">
+                    </div>
+                </div>
             </div>
-        </div>
-        <h2>Текст статьи:</h2>
-        <textarea name="" id=""></textarea>
-        <div>
-            <input type="submit" value="опубликовать">
-        </div>
     </form>
 
-</body></html>
+</body>
+
+</html>
