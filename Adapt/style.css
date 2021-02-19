@@ -1,0 +1,45 @@
+.table{
+
+background: url(img/menu_200px.png) left top repeat-y;
+
+}
+.table2{
+
+    background: url(img/ball.png) right top repeat-y;
+}
+
+.header{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: blue;
+    background: #a6e0ff;
+
+}
+
+.footer{
+    font-size: 30px;
+    font-weight: 700;
+    color: blue;
+    text-align: center;
+    background: #a6e0ff;
+}
+.menu{
+
+    float: left;
+
+}
+
+.marcello{
+
+    float: left;
+}
+.content{
+
+    margin-left: 200px;
+}
+
+.help{
+
+    clear: both;
+}

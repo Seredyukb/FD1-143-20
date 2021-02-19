@@ -1,0 +1,36 @@
+.name{
+font-size: 24px;
+font-weight: 700;
+}
+.date{
+color: green;
+}
+.achievments{
+color: red;
+font-weight: bold;
+}
+.text{
+color: blue;
+font-style: italic;
+}
+
+a.inf::before {
+content: "";
+background-image: url('extref.png');
+background-repeat: no-repeat;
+background-position: center left;
+padding-left: 10px;
+}
+@media print {
+    a[href^='http']::before {
+        content: "(ссылка ";
+    }
+
+    a[href^='http']::after {
+        content: " на https://chesspro.ru/statistic/botvinnik.shtml)";
+    }
+
+    a[href^='http'] {
+        text-decoration: none;
+    }
+}
