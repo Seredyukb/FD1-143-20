@@ -6,7 +6,7 @@
    1. ### [Tag_picture](https://seredyukb.github.io/FD1-143-20/Tag_picture/index.html)
 2. Lesson 8
    1. ### [ABS](https://seredyukb.github.io/FD1-143-20/ABS/index.html)
-   1. ### [ABS](https://seredyukb.github.io/FD1-143-20//fix/index.html)
+   1. ### [Fix](https://seredyukb.github.io/FD1-143-20/fix/index.html)
 
 
 
