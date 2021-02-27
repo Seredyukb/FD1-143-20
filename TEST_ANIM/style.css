@@ -1,0 +1,63 @@
+@keyframes rotate{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}
+@keyframes motate{
+    from{
+        transform: scale(1);
+    } 
+    to{
+        transform:scale(10);
+    }
+}
+@keyframes potate{
+    from{
+        transform: skew(0);
+    }
+    to{
+        transform: skew(15deg, 15deg);
+    }
+}
+.first{
+    width: 200px;
+    
+    background-color: green;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+    box-shadow: 10px 0 10px red;
+    
+}
+.second{
+    width: 200px;
+    
+    background-color: rgb(165, 55, 97);
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+    box-shadow: red;
+    
+}
+.third{
+    width: 200px;
+    margin: 100px;
+    background-color: rgb(228, 197, 21);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: red;
+    
+}
+
+.main:hover #qwerty{
+    animation: rotate 2s infinite;
+}
+.main:hover #asdfg{
+    animation: motate 2s;
+}
+.main:hover #zxcvb{
+    animation: potate 2s;
+}
