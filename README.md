@@ -7,11 +7,10 @@
 2. Lesson 8
    1. ### [ABS](https://seredyukb.github.io/FD1-143-20/ABS/index.html)
    1. ### [Fix](https://seredyukb.github.io/FD1-143-20/fix/index.html)
-2. Lesson 9
+3. Lesson 9
    1. ### [Video](https://seredyukb.github.io/FD1-143-20/GALLERY/index.html)
    1. ### [Anim](https://seredyukb.github.io/FD1-143-20/TEST_ANIM/index.html)
-
-
+   1. ### [Sprite](https://seredyukb.github.io/FD1-143-20/Sprite/index.html)
 
 
 
