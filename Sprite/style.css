@@ -1,0 +1,22 @@
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.sprite-image {
+    height: 256px;
+    width: 240px;
+    background: url(img/spritestrip-1536.png) 0px 0px;
+    animation: walk 0.4s steps(6) infinite,
+    go 5s linear infinite;
+    position: absolute;
+    left: 0;
+}
+@keyframes walk{
+    100%{background-position: -1536px;}
+}
+@keyframes go {
+    100% {
+        left: 100%;
+    }
+}
