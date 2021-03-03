@@ -11,6 +11,8 @@
    1. ### [Video](https://seredyukb.github.io/FD1-143-20/GALLERY/index.html)
    1. ### [Anim](https://seredyukb.github.io/FD1-143-20/TEST_ANIM/index.html)
    1. ### [Sprite](https://seredyukb.github.io/FD1-143-20/Sprite/index.html)
+   1. ### [Flex](https://seredyukb.github.io/FD1-143-20/FLEX/index.html)
+
 
 
 
