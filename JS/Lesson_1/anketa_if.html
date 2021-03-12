@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anketa_if.html</title>
+</head>
+
+<body>
+  <!-- Требуется спросить у пользователя:
+фамилию, имя, отчество РАЗДЕЛЬНО (тремя операторами prompt)
+возраст в годах (оператором prompt)
+пол (оператором confirm, например, "ваш пол - мужской?")
+и вывести оператором alert анкету пользователя по примеру:
+
+ваше ФИО: Иванов Иван Иванович
+ваш возраст в годах: 20
+ваш возраст в днях: 7300
+через 5 лет вам будет: 25
+ваш пол: мужской
+вы на пенсии: нет
+
+62
+57 -->
+  <script>
+    var name = prompt('Введите Ваше Имя');
+    var lastName = prompt('Введите Вашу Фамилию');
+    var patronymic = prompt('Введите Ваше отчетство');
+    var age = parseInt(prompt('Введите Ваш возраст в годах'));
+    var gender = confirm('Ваш пол - мужской?');
+    var ageperday = age * 365;
+    var ageAfter = age + 5;
+    var genderA;
+    var retire;
+
+
+    if (gender == true) {
+      genderA = 'Ваш пол: мужской';
+    } else {
+      genderA = 'Ваш пол: женский';
+    }
+    if (gender == true) {
+      if (age < 62) {
+        retire = 'Вы на пенсии: нет';
+      } else {
+        retire = 'Вы на пенсии: да';
+      }
+
+    } else if (gender == false) {
+      if (age < 57) {
+        retire = 'Вы на пенсии: нет';
+      } else {
+        retire = 'Вы на пенсии: да';
+      }
+
+    }
+    alert('Ваше ФИО: ' + lastName + " " + name + " " + " " + patronymic + '\n' + 'Ваш возраст в годах: ' + age + '\n' + 'Ваш возраст в днях: ' + ageperday + '\n' + 'Через 5 лет вам будет: ' + ageAfter + '\n' + genderA + '\n' + retire);
+  // alert('Ваше ФИО: ' + lastName +" " + name +" "+" " + patronymic);
+  // alert('Ваш возраст в годах: ' + age);
+  // alert('Ваш возраст в днях: ' + ageperday);
+  // alert('через 5 лет вам будет: ' + ageAfter);
+  // alert(genderA);
+  // alert(retire);
+
+
+  </script>
+</body>
+
+</html>
