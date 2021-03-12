@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anketa_oper.html</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anketa_oper.html</title>
 </head>
+
 <body>
-    
+  <!-- Требуется спросить у пользователя:
+фамилию, имя, отчество РАЗДЕЛЬНО (тремя операторами prompt)
+возраст в годах (оператором prompt)
+пол (оператором confirm, например, "ваш пол - мужской?")
+и вывести оператором alert анкету пользователя по примеру:
+
+ваше ФИО: Иванов Иван Иванович
+ваш возраст в годах: 20
+ваш возраст в днях: 7300
+через 5 лет вам будет: 25
+ваш пол: мужской
+вы на пенсии: нет
+
+var age=5;
+var t=(age<=2)?'малыш':'ребёнок';
+console.log(t);
+ребёнок
+
+62
+57 -->
+  <script>
+    var name = prompt('Введите Ваше Имя');
+    var lastName = prompt('Введите Вашу Фамилию');
+    var patronymic = prompt('Введите Ваше отчетство');
+    var age = parseInt(prompt('Введите Ваш возраст в годах'));
+    var gender = confirm('Ваш пол - мужской?');
+    var ageperday = age * 365;
+    var ageAfter = age + 5;
+    var genderA;
+    var retire;
+
+    var genderB=(gender==true)?'Ваш пол: мужской':'Ваш пол: женский';
+   
+    var retireB=(gender == true && age<62)||(gender==false && age<57)?'Вы на пенсии: нет':'Вы на пенсии: да'
+      
+    alert('Ваше ФИО: ' + lastName + " " + name + " " + " " + patronymic + '\n' + 'Ваш возраст в годах: ' + age + '\n' + 'Ваш возраст в днях: ' + ageperday + '\n' + 'Через 5 лет вам будет: ' + ageAfter + '\n' + genderB + '\n' + retireB);
+  // alert('Ваше ФИО: ' + lastName +" " + name +" "+" " + patronymic);
+  // alert('Ваш возраст в годах: ' + age);
+  // alert('Ваш возраст в днях: ' + ageperday);
+  // alert('через 5 лет вам будет: ' + ageAfter);
+  // alert(genderA);
+  // alert(retire);
+
+
+  </script>
 </body>
+
 </html>
