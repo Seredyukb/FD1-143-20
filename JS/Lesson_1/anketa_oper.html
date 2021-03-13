@@ -35,7 +35,7 @@ console.log(t);
     var patronymic = prompt('Введите Ваше отчетство');
     var age = parseInt(prompt('Введите Ваш возраст в годах'));
     var gender = confirm('Ваш пол - мужской?');
-    var ageperday = age * 365;
+    var agePerDay = age * 365;
     var ageAfter = age + 5;
     var genderA;
     var retire;
@@ -44,7 +44,7 @@ console.log(t);
    
     var retireB=(gender == true && age<62)||(gender==false && age<57)?'Вы на пенсии: нет':'Вы на пенсии: да'
       
-    alert('Ваше ФИО: ' + lastName + " " + name + " " + " " + patronymic + '\n' + 'Ваш возраст в годах: ' + age + '\n' + 'Ваш возраст в днях: ' + ageperday + '\n' + 'Через 5 лет вам будет: ' + ageAfter + '\n' + genderB + '\n' + retireB);
+    alert('Ваше ФИО: ' + lastName + " " + name + " " + " " + patronymic + '\n' + 'Ваш возраст в годах: ' + age + '\n' + 'Ваш возраст в днях: ' + agePerDay + '\n' + 'Через 5 лет вам будет: ' + ageAfter + '\n' + genderB + '\n' + retireB);
   // alert('Ваше ФИО: ' + lastName +" " + name +" "+" " + patronymic);
   // alert('Ваш возраст в годах: ' + age);
   // alert('Ваш возраст в днях: ' + ageperday);
