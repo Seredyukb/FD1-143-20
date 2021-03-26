@@ -40,7 +40,10 @@ table {
 
 .container {
   margin: 0 auto;
-  width: 1280px; }
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 @-webkit-keyframes rotate {
   from {
@@ -59,119 +62,195 @@ table {
     transform: rotate(360deg); } }
 
 .wheel {
+  margin-top: 10px;
   -webkit-animation: rotate 10s infinite;
   animation: rotate 10s infinite; }
 
 body {
-  font-family: 'Esteban', serif; }
+  font-family: "Esteban", serif;
+  text-align: center; }
+  body a {
+    color: white;
+    text-decoration: none; }
+    body a:hover {
+      text-decoration: underline; }
+
+h1 {
+  color: #e8c300;
+  font-size: 76px;
+  font-family: "Marck Script", cursive; }
+
+h2 {
+  font-family: Banny;
+  font-size: 36px;
+  line-height: 48px;
+  /* or 133% */
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 5px; }
+
+h3 {
+  font-family: "Esteban", serif;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.buttonShell #body_button {
+  height: 240px;
+  margin: 0;
+  padding: 0;
+  color: #e8c300;
+  text-align: center;
+  padding-top: 9vh; }
+
+.buttonShell .button_hola,
+.buttonShell .button_hola::before,
+.buttonShell .button_hola::after,
+.buttonShell .button_hola span,
+.buttonShell .button_hola span::before,
+.buttonShell .button_hola span::after {
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s; }
+
+.buttonShell .button_hola {
+  position: relative;
+  display: inline-block;
+  padding: 0.3em;
+  margin: 1em;
+  border: solid 1px;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+.buttonShell .button_hola:hover {
+  -webkit-box-shadow: 0 0 5em 0.5em rgba(50, 50, 150, 0.5);
+  box-shadow: 0 0 5em 0.5em rgba(50, 50, 150, 0.5); }
+
+.buttonShell .button_hola span {
+  display: inline-block;
+  width: 100%;
+  padding: 0.6em 2em; }
+
+.buttonShell .button_hola:hover span {
+  background-color: #fff;
+  color: #112; }
+
+.buttonShell .button_hola::before,
+.buttonShell .button_hola::after,
+.buttonShell .button_hola span::before,
+.buttonShell .button_hola span::after {
+  content: "";
+  position: absolute;
+  border: 1px; }
+
+.buttonShell .button_hola::before,
+.buttonShell .button_hola span::before {
+  border-style: solid none; }
+
+.buttonShell .button_hola::before,
+.buttonShell .button_hola span::after {
+  left: 0;
+  top: -0.4em;
+  width: 100%;
+  height: calc(100% + 0.8em); }
+
+.buttonShell .button_hola::after,
+.buttonShell .button_hola span::after {
+  border-style: none solid; }
+
+.buttonShell .button_hola::after,
+.buttonShell .button_hola span::before {
+  top: 0;
+  left: -0.4em;
+  height: 100%;
+  width: calc(100% + 0.8em); }
+
+.buttonShell .button_hola:hover::after,
+.buttonShell .button_hola:hover span::after {
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0); }
+
+.buttonShell .button_hola:hover::before,
+.buttonShell .button_hola:hover span::before {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0); }
+
+.buttonShell .button_hola:hover span::after,
+.buttonShell .button_hola:hover span::before {
+  opacity: 0; }
+
+.buttonShell2 .double-border-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 30px;
+  position: relative;
+  border: 2px solid #f1c40f;
+  color: #f1c40f;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
+.buttonShell2 .double-border-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 0);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
+.buttonShell2 .double-border-button:hover:after {
+  border-color: #f1c40f;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px); }
 
 .firstBlock {
+  height: 800px;
   background: url("../img/header-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
-  .firstBlock .header {
-    height: 800px; }
-    .firstBlock .header .logo {
-      width: 150px;
-      height: 150px;
-      text-align: center;
-      margin-top: 40px;
+  .firstBlock .firstBlockFirstSection {
+    padding-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .firstBlock .firstBlockSecondSection {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .firstBlock .firstBlockSecondSection h1 {
       margin-bottom: 20px; }
-      .firstBlock .header .logo a {
-        color: white; }
-    .firstBlock .header .nav {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: distribute;
-      justify-content: space-around; }
-      .firstBlock .header .nav ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        height: 100px; }
-        .firstBlock .header .nav ul li {
-          width: 133px;
-          text-align: center; }
-      .firstBlock .header .nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 24px; }
-    .firstBlock .header .section {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      height: 698px;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      .firstBlock .header .section .leftBar {
-        width: 105px;
-        height: 629px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; }
-        .firstBlock .header .section .leftBar p {
-          -webkit-writing-mode: vertical-lr;
-          -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-          color: white; }
-      .firstBlock .header .section .middleBar {
-        margin-top: 225px;
-        width: 1030px;
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: center; }
-        .firstBlock .header .section .middleBar h1 {
-          color: white;
-          font-size: 12px; }
-        .firstBlock .header .section .middleBar p {
-          font-size: 56px;
-          color: white;
-          text-transform: uppercase;
-          margin-top: 10px; }
-        .firstBlock .header .section .middleBar button {
-          margin-top: 10px;
-          background: #E8C300;
-          border-radius: 5px;
-          width: 200px;
-          height: 60px;
-          color: white; }
-          .firstBlock .header .section .middleBar button:hover {
-            background: #746100; }
-      .firstBlock .header .section .rightBar {
-        margin-top: -95px;
-        width: 145px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-        flex-flow: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-        .firstBlock .header .section .rightBar a {
-          line-height: 2;
-          color: white;
-          font-size: 20px;
-          text-decoration: none; }
-  .firstBlock a:hover {
-    text-decoration: underline !important; }
+    .firstBlock .firstBlockSecondSection h2 {
+      color: white;
+      font-family: "Esteban", serif;
+      font-size: 56px; }
+    .firstBlock .firstBlockSecondSection p {
+      color: white;
+      margin-bottom: 10px; }
+    .firstBlock .firstBlockSecondSection .links a {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+      .firstBlock .firstBlockSecondSection .links a:hover {
+        text-decoration: none; }
 
 .secondBlock {
-  height: 675px; }
+  height: 540px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
   .secondBlock .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -179,7 +258,8 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 1155px; }
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
     .secondBlock .container h2 {
       font-family: Banny;
       font-size: 36px;
@@ -191,7 +271,7 @@ body {
       margin-bottom: 5px; }
       .secondBlock .container h2 span {
         font-family: "Marck Script", cursive;
-        color: #E8C300;
+        color: #e8c300;
         text-transform: capitalize;
         font-size: 75px;
         margin-right: 2px; }
@@ -202,19 +282,32 @@ body {
       text-align: center; }
       .secondBlock .container p span {
         margin-bottom: 10px; }
+    .secondBlock .container .secondBlockLeft {
+      width: 40%; }
     .secondBlock .container .secondBlockright {
+      width: 40%;
       position: relative; }
       .secondBlock .container .secondBlockright .picSquare {
+        width: 75%;
         position: absolute;
-        top: 110px;
-        right: -145px; }
+        top: 55%;
+        right: 55%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
       .secondBlock .container .secondBlockright .picFire {
+        width: 100%;
         margin-top: 50px;
         -webkit-filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
         filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
         border-radius: 5px; }
 
 .thirdBlock {
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: url("../img/3rd_block_bg.png");
   background-position: center; }
   .thirdBlock .thirdBlockSecondSection {
@@ -224,6 +317,7 @@ body {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
     .thirdBlock .thirdBlockSecondSection .thirdBlockRightBar {
+      width: 40%;
       -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
@@ -242,22 +336,32 @@ body {
         font-style: normal;
         text-align: center; }
     .thirdBlock .thirdBlockSecondSection .thirdBlockLeftBar {
-      position: relative; }
+      position: relative;
+      width: 40%; }
+      .thirdBlock .thirdBlockSecondSection .thirdBlockLeftBar img {
+        width: 100%; }
       .thirdBlock .thirdBlockSecondSection .thirdBlockLeftBar .picSquareThirdBlock {
+        width: 75%;
         position: absolute;
-        top: 60px;
-        left: -170px; }
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
   .thirdBlock .thirdBlockFirstSection {
     text-align: center; }
     .thirdBlock .thirdBlockFirstSection h2 {
       font-size: 56px;
       padding-top: 20px;
-      color: #E8C300;
+      color: #e8c300;
       font-family: "Marck Script", cursive;
       font-style: 75px; }
 
 .forthBlock {
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   padding-top: 50px;
   padding-bottom: 50px; }
   .forthBlock .container .forthBlockFirstSection {
@@ -267,44 +371,29 @@ body {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
     .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar {
-      -ms-flex-item-align: end;
-      align-self: flex-end;
-      width: 566px;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
       height: 351px; }
       .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar .formStyle {
         margin: 2px;
-        background: #E5E5E5;
+        background: #e5e5e5;
         border-radius: 5px;
         width: 277px;
         height: 60px;
         border: none;
         padding: 10px;
         margin-bottom: 5px; }
-      .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar h2 {
-        font-family: Banny;
-        font-size: 36px;
-        line-height: 48px;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 5px; }
-      .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar button {
-        background: #E8C300;
-        border-radius: 5px;
-        width: 566px;
-        height: 60px;
-        border: none; }
-      .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar p {
-        font-size: 18px;
-        text-align: center;
-        margin-top: 10px; }
-    .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionRightBar {
-      position: relative;
-      width: 588px;
-      height: 475px; }
-      .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionRightBar .picSquareForthBlock {
-        position: absolute;
-        top: 60px;
-        right: -130px; }
+    .forthBlock .container .forthBlockFirstSection button {
+      background: #e8c300;
+      border-radius: 5px;
+      width: 566px;
+      height: 60px;
+      border: none; }
+    .forthBlock .container .forthBlockFirstSection p {
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px; }
 
 .wrapper {
   height: 70vh;
@@ -331,7 +420,7 @@ body {
     margin-bottom: 10px; }
     .sixthBlock h2 span {
       font-family: "Marck Script", cursive;
-      color: #E8C300;
+      color: #e8c300;
       text-transform: capitalize;
       font-size: 75px;
       margin-right: 2px; }
@@ -346,12 +435,13 @@ body {
       height: 250px; }
       .sixthBlock ul li h3 {
         font-family: "Montserrat", sans-serif;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600; }
       .sixthBlock ul li img {
-        width: 350px; }
+        width: 100%; }
       .sixthBlock ul li p {
         margin-top: 5px;
-        width: 350px;
         font-family: "Montserrat", sans-serif; }
 
 .footer {

@@ -1,320 +1,407 @@
 @import "Reset.scss";
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    margin: 0 auto;
-    width: 1280px;
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 // Variables
-$FSBig:56px;
-$FSMiddle:36px;
-$FSSmall:18px;
-$FontPretty: 'Marck Script', cursive;
-$FontAfisha: 'Montserrat', sans-serif;
-$FontStandart: 'Esteban', serif;
-$ColorGold: #E8C300;
-@keyframes rotate
-{
-    from{
-        transform: rotate(0deg);
+$FSBig: 56px;
+$FSMiddle: 36px;
+$FSSmall: 18px;
+$FontPretty: "Marck Script", cursive;
+$FontAfisha: "Montserrat", sans-serif;
+$FontStandart: "Esteban", serif;
+$ColorGold: #e8c300;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wheel {
+  margin-top: 10px;
+  animation: rotate 10s infinite;
+}
+body {
+  font-family: "Esteban", serif;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
-    to{
-        transform: rotate(360deg);
+  }
+}
+h1 {
+  color: $ColorGold;
+  font-size: $FSBig + 20px;
+  font-family: $FontPretty;
+}
+h2 {
+  font-family: Banny;
+  font-size: 36px;
+  line-height: 48px;
+  /* or 133% */
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 5px;
+}
+h3 {
+  font-family: $FontStandart;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+// Кнопка на первом блоке
+.buttonShell {
+  #body_button {
+    height: 240px;
+    margin: 0;
+    padding: 0;
+    color: $ColorGold;
+    text-align: center;
+    padding-top: 9vh;
+  }
+  .button_hola,
+  .button_hola::before,
+  .button_hola::after,
+  .button_hola span,
+  .button_hola span::before,
+  .button_hola span::after {
+    transition: all ease 0.5s;
+  }
+
+  .button_hola {
+    position: relative;
+    display: inline-block;
+    padding: 0.3em;
+    margin: 1em;
+    border: solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .button_hola:hover {
+    box-shadow: 0 0 5em 0.5em rgba(50, 50, 150, 0.5);
+  }
+
+  .button_hola span {
+    display: inline-block;
+    width: 100%;
+    padding: 0.6em 2em;
+  }
+
+  .button_hola:hover span {
+    background-color: #fff;
+    color: #112;
+  }
+
+  .button_hola::before,
+  .button_hola::after,
+  .button_hola span::before,
+  .button_hola span::after {
+    content: "";
+    position: absolute;
+    border: 1px;
+  }
+
+  .button_hola::before,
+  .button_hola span::before {
+    border-style: solid none;
+  }
+
+  .button_hola::before,
+  .button_hola span::after {
+    left: 0;
+    top: -0.4em;
+    width: 100%;
+    height: calc(100% + 0.8em);
+  }
+
+  .button_hola::after,
+  .button_hola span::after {
+    border-style: none solid;
+  }
+
+  .button_hola::after,
+  .button_hola span::before {
+    top: 0;
+    left: -0.4em;
+    height: 100%;
+    width: calc(100% + 0.8em);
+  }
+
+  .button_hola:hover::after,
+  .button_hola:hover span::after {
+    transform: scaleY(0);
+  }
+
+  .button_hola:hover::before,
+  .button_hola:hover span::before {
+    transform: scaleX(0);
+  }
+
+  .button_hola:hover span::after,
+  .button_hola:hover span::before {
+    opacity: 0;
+  }
+}
+// Кнопка для бронирования столика
+.buttonShell2 {
+  .double-border-button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.4s;
+  }
+  .double-border-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.4s;
+  }
+  .double-border-button:hover:after {
+    border-color: #f1c40f;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+  }
+}
+// Первый блок
+.firstBlock {
+  height: 800px;
+  background: url("../img/header-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .firstBlockFirstSection {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .firstBlockSecondSection {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1 {
+      margin-bottom: 20px;
     }
-}
-.wheel{
-                
-    animation: rotate 10s infinite;
-}
-body{
-    font-family: 'Esteban', serif;
-}
-// Первый блок - хэдэр
-.firstBlock{
-    background: url('../img/header-bg.png');
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-
-.header{
-    height: 800px;
-    
-        .logo{
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            a{
-                color: white;
-            }
+    h2 {
+      color: white;
+      font-family: $FontStandart;
+      font-size: $FSBig;
+    }
+    & p {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .links {
+      a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        &:hover {
+          text-decoration: none;
         }
-        .nav{
-            display: flex;
-            justify-content: space-around;
-            ul{
-                display: flex;
-                align-items: center;
-                height: 100px;
-                li{
-                    width: 133px;
-                    text-align: center;
-                    
-                }
-            }
-                a{
-                    color: white;
-                    text-decoration: none;
-                    font-size: 24px; ;
-                }
-        }
-        .section{
-            
-            display: flex;
-            height: 698px;
-            justify-content: center;
-            .leftBar{
-                width: 105px;
-                height: 629px;
-                display: flex;
-                -webkit-box-pack: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                align-items: center;
-                p{
-                    writing-mode: vertical-lr;
-                    color: white;
-                }
-            }
-            .middleBar{
-                margin-top: 225px;
-                width: 1030px;
-                margin-left: 20px;
-                margin-right: 20px;
-            text-align: center;
-            h1{
-                color: white;
-                font-size: 12px;
-            }
-            & p{
-                font-size: $FSBig;
-                color: white;
-                text-transform: uppercase;
-                margin-top: 10px;
-            }
-            button{
-                margin-top: 10px;
-                background: $ColorGold;
-                border-radius: 5px;
-                width: 200px;
-                height: 60px;
-                color: white;
-                &:hover{
-                    background: #746100;
-                }
-            }
-
-            }
-            .rightBar{
-                margin-top: -95px;
-                width: 145px;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                a{
-                    line-height: 2;
-                    color: white;
-                    font-size: 20px;
-                    text-decoration: none;
-                }
-            }
-        }
-}
-a:hover{
-    text-decoration: underline !important;
-    
-}
+      }
+    }
+  }
 }
 // Второй блок - О НАС
-.secondBlock{
-    height: 675px;
-        .container{
-            display: flex;
-            align-items: center;
-            width: 1155px;
-            h2{
-                font-family: Banny;
-                font-size: 36px;
-                line-height: 48px;
-                /* or 133% */
-                text-align: center;
-                text-transform: uppercase;
-                color: #000000;
-                margin-bottom: 5px;
-                span{
-                    font-family: $FontPretty;
-                    color: $ColorGold;
-                    text-transform: capitalize;
-                    font-size: 75px;
-                    margin-right: 2px;
-                }
-            }
-            p{
-                font-size: $FSSmall;
-                font-family: Open Sans;
-                font-style: normal;
-                text-align: center;
-                span{
-                    margin-bottom: 10px;
-                }
-            }
-            .secondBlockright{
-                position: relative;
-                .picSquare{
-                    position: absolute;
-                    top: 110px;
-                    right: -145px;
-                }
-                .picFire{
-                    margin-top: 50px;
-                    filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
-                    border-radius: 5px;
-                }
-            }
-        }
+.secondBlock {
+  height: 540px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    h2 {
+      font-family: Banny;
+      font-size: 36px;
+      line-height: 48px;
+      /* or 133% */
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 5px;
+      span {
+        font-family: $FontPretty;
+        color: $ColorGold;
+        text-transform: capitalize;
+        font-size: 75px;
+        margin-right: 2px;
+      }
+    }
+    p {
+      font-size: $FSSmall;
+      font-family: Open Sans;
+      font-style: normal;
+      text-align: center;
+      span {
+        margin-bottom: 10px;
+      }
+    }
+    .secondBlockLeft {
+      width: 40%;
+    }
+    .secondBlockright {
+      width: 40%;
+      position: relative;
+      .picSquare {
+        width: 75%;
+        position: absolute;
+        top: 55%;
+        right: 55%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+      }
+      .picFire {
+        width: 100%;
+        margin-top: 50px;
+        filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
+        border-radius: 5px;
+      }
+    }
+  }
 }
 // Третий блок - НАША КОМАНДА
-.thirdBlock{
-    background: url('../img/3rd_block_bg.png');
-    background-position: center;
-        .thirdBlockSecondSection{
-           
-            display: flex;
-            justify-content: space-around;
-            .thirdBlockRightBar{
-                align-self: center;
-                h2{
-                    font-family: Banny;
-                    font-size: 36px;
-                    line-height: 48px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    color:white;
-                    margin-bottom: 5px;
-                }
-                p{
-                    color: white;
-                    font-size: $FSSmall;
-                    font-family: Open Sans;
-                    font-style: normal;
-                    text-align: center;
-                }
-            }
-            .thirdBlockLeftBar{
-                position: relative;
-                .picSquareThirdBlock{
-                    position: absolute;
-                    top: 60px;
-                    left: -170px;
-                }
-            }
-        }
-    .thirdBlockFirstSection{
+.thirdBlock {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: url("../img/3rd_block_bg.png");
+  background-position: center;
+  .thirdBlockSecondSection {
+    display: flex;
+    justify-content: space-around;
+    .thirdBlockRightBar {
+      width: 40%;
+      align-self: center;
+      h2 {
+        font-family: Banny;
+        font-size: 36px;
+        line-height: 48px;
         text-align: center;
-        h2{
-            font-size: $FSBig;
-            padding-top: 20px;
-            color: $ColorGold;
-            font-family: $FontPretty;
-            font-style: 75px;
-
-        }
-        
-       
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 5px;
+      }
+      p {
+        color: white;
+        font-size: $FSSmall;
+        font-family: Open Sans;
+        font-style: normal;
+        text-align: center;
+      }
     }
-    
+    .thirdBlockLeftBar {
+      position: relative;
+      width: 40%;
+      img {
+        width: 100%;
+      }
+      .picSquareThirdBlock {
+        width: 75%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .thirdBlockFirstSection {
+    text-align: center;
+    h2 {
+      font-size: $FSBig;
+      padding-top: 20px;
+      color: $ColorGold;
+      font-family: $FontPretty;
+      font-style: 75px;
+    }
+  }
 }
 // Четвертый блок - бронирование столика
-.forthBlock{
-    margin-bottom: 90px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    .container{
-        .forthBlockFirstSection{
-            display: flex;
-            justify-content: space-around;
-            .forthBlockFirstSectionLeftBar{
-                align-self: flex-end;
-                width: 566px;
-                height: 351px;
-                .formStyle{
-                    margin: 2px;
-                    background: #E5E5E5;
-                    border-radius: 5px;
-                    width: 277px;
-                    height: 60px;
-                    border: none;
-                    padding: 10px;
-                    margin-bottom: 5px;
-                }
-                h2{
-                    font-family: Banny;
-                    font-size: 36px;
-                    line-height: 48px;
-                    text-align: center;
-                    text-transform: uppercase;
-                    margin-bottom: 5px;
-                }
-                button{
-                    background:$ColorGold;
-                    border-radius: 5px;
-                    width: 566px;
-                    height: 60px;
-                    border: none;
-                }
-                p{
-                    font-size: $FSSmall;
-                    text-align: center;
-                    margin-top: 10px;
-                }
-            }
-            .forthBlockFirstSectionRightBar{
-                position: relative;
-                width: 588px;
-                height: 475px;
-                .picSquareForthBlock{
-                    position: absolute;
-                    top: 60px;
-                    right: -130px;
-                }
-            }
+.forthBlock {
+  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .container {
+    .forthBlockFirstSection {
+      display: flex;
+      justify-content: space-around;
+      .forthBlockFirstSectionLeftBar {
+        align-self: center;
+        height: 351px;
+        .formStyle {
+          margin: 2px;
+          background: #e5e5e5;
+          border-radius: 5px;
+          width: 277px;
+          height: 60px;
+          border: none;
+          padding: 10px;
+          margin-bottom: 5px;
         }
+      }
+      button {
+        background: $ColorGold;
+        border-radius: 5px;
+        width: 566px;
+        height: 60px;
+        border: none;
+      }
+      p {
+        font-size: $FSSmall;
+        text-align: center;
+        margin-top: 10px;
+      }
     }
+  }
 }
+
 // 5 Блок параллакс эффект
-.wrapper{
-    height: 70vh;
-    margin-bottom: 20px;
-    .parallaxImg{
-        background: url('../img/food.jpg');
+.wrapper {
+  height: 70vh;
+  margin-bottom: 20px;
+  .parallaxImg {
+    background: url("../img/food.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50%;
     background-size: cover;
     height: 100%;
-    }
+  }
 }
 // 6 Блок Афиша мероприятий
-.sixthBlock{
-height: 500px;
-margin-top: 100px;
-margin-bottom: 40px;
+.sixthBlock {
+  height: 500px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 
-h2{
+  h2 {
     font-family: Banny;
     font-size: 36px;
     line-height: 48px;
@@ -322,74 +409,73 @@ h2{
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 10px;
-    span{
-        font-family: "Marck Script", cursive;
-        color: #E8C300;
-        text-transform: capitalize;
-        font-size: 75px;
-        margin-right: 2px;
+    span {
+      font-family: "Marck Script", cursive;
+      color: #e8c300;
+      text-transform: capitalize;
+      font-size: 75px;
+      margin-right: 2px;
     }
-}
-    ul{
-        display: flex;
-        justify-content: space-around;
-        li{
-            width: 250px;
-            height: 250px;
-            h3{
-                font-family: $FontAfisha;
-                margin-bottom: 10px;
-            }
-            img{
-                width: 350px;
-            }
-            p{
-                margin-top: 5px;
-                width: 350px;
-                font-family: $FontAfisha;
-            }
-        }
-    }
-}
-// Footer 
-.footer{
+  }
+  ul {
     display: flex;
-    align-items: center;
-    height: 300px;
-    font-family: $FontStandart;
-    color: white;
-    background: #333;
-    .copyright{
-        margin-top: 40px;
-        text-align: center;
+    justify-content: space-around;
+    li {
+      width: 250px;
+      height: 250px;
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: 5px;
+        font-family: $FontAfisha;
+      }
     }
-    ul{
+  }
+}
+// Footer
+.footer {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  font-family: $FontStandart;
+  color: white;
+  background: #333;
+  .copyright {
+    margin-top: 40px;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    .refFooter {
+      h2 {
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 45px;
+      }
+      display: flex;
+      flex-direction: column;
+      ul {
         display: flex;
-        justify-content: space-around;
-        .refFooter{
-           
-            h2{
-                text-transform: uppercase;
-            }
-            h3{
-                font-size: 18px;
-                margin-bottom: 45px;
-            }
-            display: flex;
-            flex-direction: column;
-            ul{
-                display: flex;
-                flex-direction: column;
-                li{
-                    margin-bottom: 10px;
-                    display: flex;
-                    flex-direction: row;
-                    p{
-                        margin-left: 10px;
-                    }
-                }
-
-            }
+        flex-direction: column;
+        li {
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: row;
+          p {
+            margin-left: 10px;
+          }
         }
+      }
     }
+  }
 }
