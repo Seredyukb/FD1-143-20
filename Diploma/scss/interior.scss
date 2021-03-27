@@ -1,0 +1,190 @@
+@import "Reset.scss";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+// Variables
+$FSBig: 56px;
+$FSMiddle: 36px;
+$FSSmall: 18px;
+$FontPretty: "Marck Script", cursive;
+$FontAfisha: "Montserrat", sans-serif;
+$FontStandart: "Esteban", serif;
+$ColorGold: #e8c300;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.wheel {
+    margin-top: 10px;
+    animation: rotate 10s infinite;
+}
+body {
+    font-family: "Esteban", serif;
+    text-align: center;
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:active {
+            color: $ColorGold;
+            text-decoration: underline;
+        }
+    }
+}
+h1 {
+    color: $ColorGold;
+    font-size: $FSBig + 20px;
+    font-family: $FontPretty;
+}
+h2 {
+    font-family: Banny;
+    font-size: 36px;
+    line-height: 48px;
+    /* or 133% */
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 5px;
+}
+h3 {
+    font-family: $FontStandart;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+// Первый блок
+.firstBlock {
+    height: 310px;
+    background: url("../img/header-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .firstBlockFirstSection {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .firstBlockSecondSection {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        h1 {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: white;
+            font-family: $FontStandart;
+            font-size: $FSBig;
+        }
+        p {
+            color: white;
+            margin-bottom: 10px;
+        }
+        .links {
+            a {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+// Блок с галереей интерьера
+.sixthBlock {
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    .container {
+        .galleryFlex {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            .gallery {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                line-height: none;
+                border: 1px solid #ccc;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                &:hover {
+                    border: 1px solid #000000;
+                }
+            }
+        }
+        h2 {
+            font-family: Banny;
+            font-size: 36px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+            margin-bottom: 10px;
+            span {
+                margin-bottom: 10px;
+                font-family: "Marck Script", cursive;
+                color: #e8c300;
+                text-transform: capitalize;
+                font-size: 75px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+// Footer
+.footer {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    font-family: $FontStandart;
+    color: white;
+    background: #333;
+    .copyright {
+        margin-top: 40px;
+        text-align: center;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        .refFooter {
+            h2 {
+                color: white;
+                text-transform: uppercase;
+            }
+            h3 {
+                font-size: 18px;
+                margin-bottom: 45px;
+            }
+            display: flex;
+            flex-direction: column;
+            ul {
+                display: flex;
+                flex-direction: column;
+                li {
+                    margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

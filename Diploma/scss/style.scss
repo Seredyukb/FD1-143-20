@@ -41,6 +41,10 @@ body {
     &:hover {
       text-decoration: underline;
     }
+    &:active {
+      color: $ColorGold;
+      text-decoration: underline;
+    }
   }
 }
 h1 {
@@ -345,7 +349,7 @@ h3 {
 }
 // Четвертый блок - бронирование столика
 .forthBlock {
-  margin-bottom: 100px;
+  height: 670px;
   padding-top: 50px;
   padding-bottom: 50px;
   .container {
@@ -456,6 +460,7 @@ h3 {
     justify-content: space-around;
     .refFooter {
       h2 {
+        color: white;
         text-transform: uppercase;
       }
       h3 {

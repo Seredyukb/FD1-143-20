@@ -1,0 +1,229 @@
+/* Reset CSS by Eric Meyer http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.wheel {
+  margin-top: 10px;
+  -webkit-animation: rotate 10s infinite;
+  animation: rotate 10s infinite; }
+
+body {
+  font-family: "Esteban", serif;
+  text-align: center; }
+  body a {
+    color: white;
+    text-decoration: none; }
+    body a:hover {
+      text-decoration: underline; }
+    body a:active {
+      color: #e8c300;
+      text-decoration: underline; }
+
+h1 {
+  color: #e8c300;
+  font-size: 76px;
+  font-family: "Marck Script", cursive; }
+
+h2 {
+  font-family: Banny;
+  font-size: 36px;
+  line-height: 48px;
+  /* or 133% */
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 5px; }
+
+h3 {
+  font-family: "Esteban", serif;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.firstBlock {
+  height: 310px;
+  background: url("../img/header-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .firstBlock .firstBlockFirstSection {
+    padding-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .firstBlock .firstBlockSecondSection {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .firstBlock .firstBlockSecondSection h1 {
+      margin-bottom: 20px; }
+    .firstBlock .firstBlockSecondSection h2 {
+      color: white;
+      font-family: "Esteban", serif;
+      font-size: 56px; }
+    .firstBlock .firstBlockSecondSection p {
+      color: white;
+      margin-bottom: 10px; }
+    .firstBlock .firstBlockSecondSection .links a {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+      .firstBlock .firstBlockSecondSection .links a:hover {
+        text-decoration: none; }
+
+.sixthBlock {
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 40px; }
+  .sixthBlock h2 {
+    font-family: Banny;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 10px; }
+    .sixthBlock h2 span {
+      font-family: "Marck Script", cursive;
+      color: #e8c300;
+      text-transform: capitalize;
+      font-size: 75px;
+      margin-right: 2px; }
+  .sixthBlock ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .sixthBlock ul li {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      width: 250px;
+      height: 250px; }
+      .sixthBlock ul li h3 {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 600; }
+      .sixthBlock ul li img {
+        height: 187.59px;
+        width: 249.99px; }
+      .sixthBlock ul li p {
+        margin-top: 5px;
+        font-family: "Montserrat", sans-serif; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 300px;
+  font-family: "Esteban", serif;
+  color: white;
+  background: #333; }
+  .footer .copyright {
+    margin-top: 40px;
+    text-align: center; }
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .footer ul .refFooter {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .footer ul .refFooter h2 {
+        color: white;
+        text-transform: uppercase; }
+      .footer ul .refFooter h3 {
+        font-size: 18px;
+        margin-bottom: 45px; }
+      .footer ul .refFooter ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .footer ul .refFooter ul li {
+          margin-bottom: 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row; }
+          .footer ul .refFooter ul li p {
+            margin-left: 10px; }

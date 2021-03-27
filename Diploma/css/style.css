@@ -74,6 +74,9 @@ body {
     text-decoration: none; }
     body a:hover {
       text-decoration: underline; }
+    body a:active {
+      color: #e8c300;
+      text-decoration: underline; }
 
 h1 {
   color: #e8c300;
@@ -361,7 +364,7 @@ h3 {
       font-style: 75px; }
 
 .forthBlock {
-  margin-bottom: 100px;
+  height: 670px;
   padding-top: 50px;
   padding-bottom: 50px; }
   .forthBlock .container .forthBlockFirstSection {
@@ -473,6 +476,7 @@ h3 {
       -ms-flex-direction: column;
       flex-direction: column; }
       .footer ul .refFooter h2 {
+        color: white;
         text-transform: uppercase; }
       .footer ul .refFooter h3 {
         font-size: 18px;
