@@ -28,21 +28,6 @@ $ColorGold: #e8c300;
         transform: rotate(360deg);
     }
 }
-// кнопка для мероприятий
-a.knopka {
-    color: #fff; /* цвет текста */
-    text-decoration: none; /* убирать подчёркивание у ссылок */
-    user-select: none; /* убирать выделение текста */
-    background: $ColorGold; /* фон кнопки */
-    padding: 0.7em 1.5em; /* отступ от текста */
-    outline: none; /* убирать контур в Mozilla */
-}
-a.knopka:hover {
-    background: rgb(177, 148, 22);
-} /* при наведении курсора мышки */
-a.knopka:active {
-    background: rgb(177, 148, 22);
-} /* при нажатии */
 .wheel {
     margin-top: 10px;
     animation: rotate 10s infinite;
@@ -122,60 +107,83 @@ h3 {
         }
     }
 }
-// Блок Афиша мероприятий
+// Блок с меню
 .sixthBlock {
     height: 100%;
     margin-top: 100px;
-    margin-bottom: 90px;
-
-    h2 {
-        font-family: Banny;
-        font-size: 36px;
-        line-height: 48px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #000000;
-        margin-bottom: 10px;
-        span {
-            font-family: "Marck Script", cursive;
-            color: #e8c300;
-            text-transform: capitalize;
-            font-size: 75px;
-            margin-right: 2px;
-        }
-    }
-    ul {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        li {
-            margin-top: 70px;
-            margin-bottom: 70px;
-            width: 250px;
-            height: 250px;
-            h3 {
-                font-family: "Montserrat", sans-serif;
+    margin-bottom: 40px;
+    .container {
+        h2 {
+            font-family: Banny;
+            font-size: 36px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+            margin-bottom: 10px;
+            span {
                 margin-bottom: 10px;
-                font-size: 16px;
-                font-weight: 600;
-            }
-            img {
-                height: 187.59px;
-                width: 249.99px;
-            }
-            p {
-                margin-top: 5px;
-                font-family: $FontAfisha;
-                margin-bottom: 42px;
+                font-family: "Marck Script", cursive;
+                color: #e8c300;
+                text-transform: capitalize;
+                font-size: 75px;
+                margin-right: 2px;
             }
         }
     }
+}
+// Блок меню
+.menuBlockLeftBar {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .menuBar {
+        flex-shrink: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+        & a {
+            font-family: Banny;
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 10px;
+        }
+    }
+}
+.menuBlock {
+    text-align: center;
+}
+.menuBlockRightBar {
+    padding: 16px;
+    & li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .menuBlockRightBarImg {
+            max-width: 100%;
+            width: 700px;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .menuBlockRightBar {
+    padding-top: 102px;
 }
 // Footer
 .footer {
     display: flex;
     align-items: center;
-    height: 300px;
+    height: 100%;
     font-family: $FontStandart;
     color: white;
     background: #333;
@@ -186,6 +194,7 @@ h3 {
     ul {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         .refFooter {
             h2 {
                 color: white;
@@ -193,7 +202,7 @@ h3 {
             }
             h3 {
                 font-size: 18px;
-                margin-bottom: 45px;
+                align-self: flex-start;
             }
             display: flex;
             flex-direction: column;
@@ -210,5 +219,11 @@ h3 {
                 }
             }
         }
+    }
+}
+// Медиазапросы
+@media all and (max-width: 947px) {
+    .refFooter {
+        width: 50%;
     }
 }

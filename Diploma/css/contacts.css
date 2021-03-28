@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Reset CSS by Eric Meyer http://meyerweb.com/eric/tools/css/reset/ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
@@ -62,31 +61,6 @@ table {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-a.knopka {
-  color: #fff;
-  /* цвет текста */
-  text-decoration: none;
-  /* убирать подчёркивание у ссылок */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* убирать выделение текста */
-  background: #e8c300;
-  /* фон кнопки */
-  padding: 0.7em 1.5em;
-  /* отступ от текста */
-  outline: none;
-  /* убирать контур в Mozilla */ }
-
-a.knopka:hover {
-  background: #b19416; }
-
-/* при наведении курсора мышки */
-a.knopka:active {
-  background: #b19416; }
-
-/* при нажатии */
 .wheel {
   margin-top: 10px;
   -webkit-animation: rotate 10s infinite;
@@ -157,49 +131,125 @@ h3 {
       .firstBlock .firstBlockSecondSection .links a:hover {
         text-decoration: none; }
 
+.secondBlockContacts {
+  background: url("../img/bg_contacts.png") repeat;
+  padding: 60px; }
+  .secondBlockContacts .secondBlockContactsSection #visitCard {
+    width: 100%; }
+
 .sixthBlock {
-  height: 100%;
-  margin-top: 100px;
-  margin-bottom: 90px; }
-  .sixthBlock h2 {
-    font-family: Banny;
-    font-size: 36px;
-    line-height: 48px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 10px; }
-    .sixthBlock h2 span {
-      font-family: "Marck Script", cursive;
-      color: #e8c300;
-      text-transform: capitalize;
-      font-size: 75px;
-      margin-right: 2px; }
-  .sixthBlock ul {
+  background: url("../img/bg_contacts.png") repeat;
+  padding: 40px 0 40px 0;
+  height: 100%; }
+  .sixthBlock .sixthBlockTime {
+    margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    .sixthBlock ul li {
-      margin-top: 70px;
-      margin-bottom: 70px;
-      width: 250px;
-      height: 250px; }
-      .sixthBlock ul li h3 {
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 10px;
-        font-size: 16px;
-        font-weight: 600; }
-      .sixthBlock ul li img {
-        height: 187.59px;
-        width: 249.99px; }
-      .sixthBlock ul li p {
-        margin-top: 5px;
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 42px; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .sixthBlock .sixthBlockTime p {
+      margin-top: 10px;
+      margin-bottom: 0px; }
+  .sixthBlock .zebra {
+    border-spacing: 0;
+    empty-cells: hide; }
+  .sixthBlock td {
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f4eee8;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+  .sixthBlock td:first-child {
+    text-align: left;
+    color: #3d3511;
+    font-weight: bold; }
+  .sixthBlock th {
+    padding: 10px 20px;
+    color: #3d3511;
+    border-bottom: 1px solid #f4eee8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .sixthBlock .round-top {
+    border-top-left-radius: 5px; }
+  .sixthBlock .round-bottom {
+    border-bottom-left-radius: 5px; }
+  .sixthBlock tr:hover td {
+    background: #d1c7bf;
+    font-weight: bold; }
+
+#map {
+  max-width: 100%;
+  width: 1280px;
+  height: 400px; }
+
+.container h2 {
+  font-family: Banny;
+  font-size: 36px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 10px; }
+  .container h2 span {
+    margin-bottom: 10px;
+    font-family: "Marck Script", cursive;
+    color: #e8c300;
+    text-transform: capitalize;
+    font-size: 75px;
+    margin-right: 2px; }
+
+.menuBlockLeftBar {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%; }
+  .menuBlockLeftBar .menuBar {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin-left: 5px;
+    margin-right: 5px; }
+    .menuBlockLeftBar .menuBar a {
+      font-family: Banny;
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 10px; }
+
+.menuBlock {
+  text-align: center; }
+
+.menuBlockRightBar {
+  padding: 16px; }
+  .menuBlockRightBar li {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .menuBlockRightBar li .menuBlockRightBarImg {
+      max-width: 100%;
+      width: 700px; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.sticky + .menuBlockRightBar {
+  padding-top: 102px; }
 
 .footer {
   display: -webkit-box;
