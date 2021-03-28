@@ -101,13 +101,13 @@ h3 {
   text-transform: uppercase; }
 
 .firstBlock {
-  height: 310px;
+  min-height: 310px;
   background: url("../img/header-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
   .firstBlock .firstBlockFirstSection {
-    padding-top: 50px;
+    padding: 40px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -258,7 +258,7 @@ h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 300px;
+  min-height: 300px;
   font-family: "Esteban", serif;
   color: white;
   background: #333; }
@@ -304,3 +304,26 @@ h3 {
           flex-direction: row; }
           .footer ul .refFooter ul li p {
             margin-left: 10px; }
+
+@media all and (max-width: 1024px) {
+  .footerMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+
+@media all and (min-width: 280px) {
+  .refFooter {
+    max-width: 100%; } }
+
+@media all and (max-width: 1024px) {
+  .firstBlockFirstSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column; }
+    .firstBlockFirstSection li {
+      padding: 10px; } }

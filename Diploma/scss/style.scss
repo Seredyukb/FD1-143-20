@@ -197,13 +197,13 @@ h3 {
 }
 // Первый блок
 .firstBlock {
-  height: 800px;
+  min-height: 310px;
   background: url("../img/header-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   .firstBlockFirstSection {
-    padding-top: 50px;
+    padding: 40px 0;
     display: flex;
     justify-content: space-around;
   }
@@ -235,7 +235,7 @@ h3 {
 }
 // Второй блок - О НАС
 .secondBlock {
-  height: 540px;
+  min-height: 540px;
   margin-top: 10px;
   margin-bottom: 10px;
   .container {
@@ -293,6 +293,7 @@ h3 {
 }
 // Третий блок - НАША КОМАНДА
 .thirdBlock {
+  min-height: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
   background: url("../img/3rd_block_bg.png");
@@ -349,7 +350,7 @@ h3 {
 }
 // Четвертый блок - бронирование столика
 .forthBlock {
-  height: 670px;
+  min-height: 670px;
   padding-top: 50px;
   padding-bottom: 50px;
   .container {
@@ -401,7 +402,7 @@ h3 {
 }
 // 6 Блок Афиша мероприятий
 .sixthBlock {
-  height: 500px;
+  min-height: 500px;
   margin-top: 100px;
   margin-bottom: 40px;
 
@@ -447,7 +448,7 @@ h3 {
 .footer {
   display: flex;
   align-items: center;
-  height: 300px;
+  min-height: 300px;
   font-family: $FontStandart;
   color: white;
   background: #333;
@@ -481,6 +482,26 @@ h3 {
           }
         }
       }
+    }
+  }
+}
+// Медиазапросы
+@media all and (max-width: 1024px) {
+  .footerMain {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media all and (min-width: 280px) {
+  .refFooter {
+    max-width: 100%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .firstBlockFirstSection {
+    flex-flow: column;
+    & li {
+      padding: 10px;
     }
   }
 }

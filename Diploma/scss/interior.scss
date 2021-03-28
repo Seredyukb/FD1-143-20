@@ -71,13 +71,13 @@ h3 {
 }
 // Первый блок
 .firstBlock {
-    height: 310px;
+    min-height: 310px;
     background: url("../img/header-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     .firstBlockFirstSection {
-        padding-top: 50px;
+        padding: 40px 0;
         display: flex;
         justify-content: space-around;
     }
@@ -151,7 +151,7 @@ h3 {
 .footer {
     display: flex;
     align-items: center;
-    height: 300px;
+    min-height: 300px;
     font-family: $FontStandart;
     color: white;
     background: #333;
@@ -185,6 +185,26 @@ h3 {
                     }
                 }
             }
+        }
+    }
+}
+// Медиазапросы
+@media all and (max-width: 1024px) {
+    .footerMain {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media all and (min-width: 280px) {
+    .refFooter {
+        max-width: 100%;
+    }
+}
+@media all and (max-width: 1024px) {
+    .firstBlockFirstSection {
+        flex-flow: column;
+        & li {
+            padding: 10px;
         }
     }
 }
