@@ -184,11 +184,6 @@ h3 {
     background: #d1c7bf;
     font-weight: bold; }
 
-#map {
-  max-width: 100%;
-  width: 1280px;
-  height: 400px; }
-
 .container h2 {
   font-family: Banny;
   font-size: 36px;
@@ -302,7 +297,7 @@ h3 {
           -webkit-box-direction: normal;
           -ms-flex-direction: row;
           flex-direction: row; }
-          .footer ul .refFooter ul li p {
+          .footer ul .refFooter ul li a {
             margin-left: 10px; }
 
 @media all and (max-width: 1024px) {

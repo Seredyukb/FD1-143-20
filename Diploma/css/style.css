@@ -365,7 +365,7 @@ h3 {
       font-style: 75px; }
 
 .forthBlock {
-  min-height: 670px;
+  min-height: 470px;
   padding-top: 50px;
   padding-bottom: 50px; }
   .forthBlock .container .forthBlockFirstSection {
@@ -499,7 +499,7 @@ h3 {
           -webkit-box-direction: normal;
           -ms-flex-direction: row;
           flex-direction: row; }
-          .footer ul .refFooter ul li p {
+          .footer ul .refFooter ul li a {
             margin-left: 10px; }
 
 @media all and (max-width: 1024px) {

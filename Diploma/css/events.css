@@ -252,7 +252,7 @@ h3 {
           -webkit-box-direction: normal;
           -ms-flex-direction: row;
           flex-direction: row; }
-          .footer ul .refFooter ul li p {
+          .footer ul .refFooter ul li a {
             margin-left: 10px; }
 
 @media all and (max-width: 1024px) {
