@@ -45,6 +45,9 @@ table {
   padding-left: 20px;
   padding-right: 20px; }
 
+.hpot {
+  display: none; }
+
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -84,7 +87,7 @@ h1 {
   font-family: "Marck Script", cursive; }
 
 h2 {
-  font-family: Banny;
+  font-family: "Esteban", serif;
   font-size: 36px;
   line-height: 48px;
   /* or 133% */
@@ -197,7 +200,8 @@ h3 {
   font-family: "Montserrat", sans-serif;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
-  transition: 0.4s; }
+  transition: 0.4s;
+  cursor: pointer; }
 
 .buttonShell2 .double-border-button:after {
   content: "";
@@ -264,7 +268,7 @@ h3 {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
     .secondBlock .container h2 {
-      font-family: Banny;
+      font-family: "Esteban", serif;
       font-size: 36px;
       line-height: 48px;
       /* or 133% */
@@ -326,7 +330,7 @@ h3 {
       -ms-grid-row-align: center;
       align-self: center; }
       .thirdBlock .thirdBlockSecondSection .thirdBlockRightBar h2 {
-        font-family: Banny;
+        font-family: "Esteban", serif;
         font-size: 36px;
         line-height: 48px;
         text-align: center;
@@ -336,7 +340,7 @@ h3 {
       .thirdBlock .thirdBlockSecondSection .thirdBlockRightBar p {
         color: white;
         font-size: 18px;
-        font-family: Open Sans;
+        font-family: "Esteban", serif;
         font-style: normal;
         text-align: center; }
     .thirdBlock .thirdBlockSecondSection .thirdBlockLeftBar {
@@ -379,21 +383,21 @@ h3 {
       -ms-grid-row-align: center;
       align-self: center;
       height: 351px; }
-      .forthBlock .container .forthBlockFirstSection .forthBlockFirstSectionLeftBar .formStyle {
-        margin: 2px;
-        background: #e5e5e5;
-        border-radius: 5px;
-        width: 277px;
-        height: 60px;
-        border: none;
-        padding: 10px;
-        margin-bottom: 5px; }
-    .forthBlock .container .forthBlockFirstSection button {
-      background: #e8c300;
+    .forthBlock .container .forthBlockFirstSection .formStyle {
+      margin: 2px;
+      background: #e5e5e5;
       border-radius: 5px;
-      width: 566px;
+      width: 277px;
       height: 60px;
-      border: none; }
+      border: none;
+      padding: 10px 0px 10px 24px;
+      margin-bottom: 5px; }
+      .forthBlock .container .forthBlockFirstSection .formStyle:valid {
+        background: url(https://img.icons8.com/doodle/24/000000/checkmark.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px;
+        border: solid green 1px; }
     .forthBlock .container .forthBlockFirstSection p {
       font-size: 18px;
       text-align: center;
@@ -415,7 +419,7 @@ h3 {
   margin-top: 100px;
   margin-bottom: 40px; }
   .sixthBlock h2 {
-    font-family: Banny;
+    font-family: "Esteban", serif;
     font-size: 36px;
     line-height: 48px;
     text-align: center;

@@ -45,7 +45,8 @@
                                 href="index.html#bookTable"><span>Заказать столик</span></a></div>
                     </div>
                 </div>
-                <p>Пон - Пт: 20:00 - 22:00, Сб - Вс: 20:00 - 03:00</p>
+                <p>Пн &hyphen; Пт&colon; 20&colon;00 &hyphen; 22&colon;00, Сб &hyphen; Вс&colon; 20&colon;00 &hyphen;
+                    03&colon;00</p>
                 <div class="links">
                     <a class="fab fa-facebook" href="#" title="Facebook"></a><br>
                     <a class="fab fa-twitter" href="#" title="Twitter"></a><br>
@@ -109,16 +110,30 @@
                 <div class="forthBlockFirstSectionLeftBar">
                     <h2>Заказ столика</h2>
                     <div>
-                        <form action="">
-                            <input class="formStyle" type="text" placeholder="Ваше имя">
-                            <input class="formStyle" type="tel" placeholder="Ваш телефон">
-                            <input class="formStyle" type="date" placeholder="Дата">
-                            <input class="formStyle" type="email" placeholder="Ваш E-mail">
-                            <input class="formStyle" type="number" placeholder="Количество человек">
-                            <input class="formStyle" type="datetime" placeholder="Время">
-                            <div class="buttonShell2" title="Забронировать столик"><a href="#"
-                                    class="double-border-button">Забронировать</a></div>
-                            <p>Пон - Пт: 20:00 - 22:00, Сб - Вс: 20:00 - 03:00 <br> Тел: +375 29 000 00 01
+                        <form method="POST" action=https://formspree.io/f/mqkwzoyb>
+                            <div class="hpot">
+                                <label>Leave this field empty: <input name="_gotcha"></label>
+                            </div>
+                            <input class="formStyle" type="text" name="clientName" placeholder="Ваше имя" required
+                                autocomplete="off" pattern="(^[a-zA-Z]+$)|(^[А-Яа-яЁё]+$)"
+                                title="Введите Ваше имя на русском либо английском языке/your name in eng or rus">
+                            <input class="formStyle" type="tel" name="clientNumber"
+                                pattern="\+375-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+375-XX-XХХ-ХХ-ХХ"
+                                required autocomplete="off" title="Введите Ваш номер телефона в указанном формате">
+                            <input class="formStyle" type="date" placeholder="Дата" required autocomplete="off"
+                                title="Введите желаемую дату">
+                            <input class="formStyle" type="email" placeholder="Ваш E-mail" required autocomplete="off"
+                                title="Введите Ваш e-mail">
+                            <input class="formStyle" type="number" placeholder="Количество человек" required
+                                autocomplete="off" min="1" max="12"
+                                title="Введите желаемое количество человек в диапазоне от 1 до 12">
+                            <input class="formStyle" type="time" placeholder="Время" required autocomplete="off"
+                                title="Введите время бронирования столика">
+                            <div class="buttonShell2" title="Забронировать столик"><button type="submit"
+                                    class="double-border-button">Забронировать</button></div>
+                            <p>Пн &hyphen; Пт&colon; 20&colon;00 &hyphen; 22&colon;00, Сб &hyphen; Вс&colon; 20&colon;00
+                                &hyphen;
+                                03&colon;00<br>Тел&colon; &plus;375 29 000 00 01
                             </p>
                         </form>
                     </div>

@@ -84,7 +84,7 @@ h1 {
   font-family: "Marck Script", cursive; }
 
 h2 {
-  font-family: Banny;
+  font-family: "Esteban", serif;
   font-size: 36px;
   line-height: 48px;
   /* or 133% */
@@ -155,7 +155,7 @@ h3 {
       .sixthBlock .container .galleryFlex .gallery:hover {
         border: 1px solid #000000; }
   .sixthBlock .container h2 {
-    font-family: Banny;
+    font-family: "Esteban", serif;
     font-size: 36px;
     line-height: 30px;
     text-align: center;

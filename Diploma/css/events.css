@@ -110,7 +110,7 @@ h1 {
   font-family: "Marck Script", cursive; }
 
 h2 {
-  font-family: Banny;
+  font-family: "Esteban", serif;
   font-size: 36px;
   line-height: 48px;
   /* or 133% */
@@ -162,7 +162,7 @@ h3 {
   margin-top: 100px;
   margin-bottom: 90px; }
   .sixthBlock h2 {
-    font-family: Banny;
+    font-family: "Esteban", serif;
     font-size: 36px;
     line-height: 48px;
     text-align: center;
