@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blablabla</title>
+</head>
+<body>
+    <script>
+      // var genderB=(gender==true)?'Ваш пол: мужской':'Ваш пол: женский';
+  
+    //  var lastName = prompt('Введите Вашу Фамилию');
+    // if (lastName != ' ') {
+    //   var lastName = prompt('Введите Вашу Фамилию');
+    // } else {
+    //   alert('nonono');
+    // }
+     while (true) {
+      var lastName = prompt('Введите Вашу Фамилию');
+      if (lastName.indexOf('1') != -1 || 
+      lastName.indexOf('2') != -1    ||    
+      lastName.indexOf('3') != -1    ||   
+      lastName.indexOf('4') != -1    ||   
+      lastName.indexOf('5') != -1    ||   
+      lastName.indexOf('6') != -1    ||   
+      lastName.indexOf('7') != -1    ||    
+      lastName.indexOf('8') != -1    ||   
+      lastName.indexOf('9') != -1    ||    
+      lastName.indexOf('0') != -1    ||    
+      lastName.indexOf('') != -1     ||   
+      lastName.indexOf(' ') != -1    ||    
+      lastName.indexOf('!') != -1    ||    
+      lastName.indexOf('@') != -1    ||    
+      lastName.indexOf('_') != -1    ||    
+      lastName.indexOf('+') != -1)  
+       { alert('Введите корр-t занеч-trе')
+      } else
+      break;
+    }
+    var patronymic = prompt('Введите Ваше отчетство');
+    var age = parseInt(prompt('Введите Ваш возраст в годах'));
+    var gender = confirm('Ваш пол - мужской?');
+    var agePerDay = age * 365;
+    var ageAfter = age + 5;
+    var genderA;
+    var retire;
+    
+
+    if (gender == true) {
+      genderA = 'Ваш пол: мужской';
+    } else {
+      genderA = 'Ваш пол: женский';
+    }
+    if (gender == true) {
+      if (age < 62) {
+        retire = 'Вы на пенсии: нет';
+      } else {
+        retire = 'Вы на пенсии: да';
+      }
+
+    } else if (gender == false) {
+      if (age < 57) {
+        retire = 'Вы на пенсии: нет';
+      } else {
+        retire = 'Вы на пенсии: да';
+      }
+
+    }
+    alert('Ваше ФИО: ' + lastName + " " + name + " " + " " + patronymic + '\n' + 'Ваш возраст в годах: ' + age + '\n' + 'Ваш возраст в днях: ' + agePerDay + '\n' + 'Через 5 лет вам будет: ' + ageAfter + '\n' + genderA + '\n' + retire);
+  // alert('Ваше ФИО: ' + lastName +" " + name +" "+" " + patronymic);
+  // alert('Ваш возраст в годах: ' + age);
+  // alert('Ваш возраст в днях: ' + ageperday);
+  // alert('через 5 лет вам будет: ' + ageAfter);
+  // alert(genderA);
+  // alert(retire);
+
+// Должен быть контроль корректности вводимых пользователем данных (например, фамилия не должна быть пустой, возраст должен быть корректной цифрой и т.д.).
+// Оператор alert в коде должен использоваться ровно один раз.
+
+    </script>
+</body>
+</html>

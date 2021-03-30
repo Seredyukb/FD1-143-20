@@ -82,11 +82,14 @@ h2 {
     background: #4985FF;
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 30px;
+    position: relative;
     width: 200px;
     height: 45px;
     color: #fff;
     text-align: center;
     border: none;
+    transition-duration: 1s;
+    transition-property: all;
 }
 
 content_firstblock {
@@ -136,7 +139,7 @@ content_firstblock {
     text-align: center;
 
 }
-}
+
 
 .secondblock_mini p {
     text-align: center;
@@ -160,7 +163,7 @@ content_firstblock {
     float: right;
     width: 226px;
 }
-}
+
 
 .clearfix {
     clear: both;
@@ -171,11 +174,11 @@ content_firstblock {
     margin-bottom: 12px;
 }
 
-    {}
-}
+    
+
 
 .thirdblock {
-        {}
+        
 
     background-color: #F6F6F8;
     max-width: 1920px;
@@ -190,7 +193,7 @@ content_firstblock {
     margin-right: 121px;
 }
 
-..thirdblock1 a {
+.thirdblock1 a {
 
     text-decoration: none;
 }
@@ -275,11 +278,14 @@ h4 {
     box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 30px;
     width: 200px;
+    position: relative;
     height: 45px;
     color: #fff;
     text-align: center;
     border: none;
     margin-bottom: 200px;
+    transition-duration: 1s;
+    transition-property: all;
 }
 
 .fifthblock {
@@ -337,7 +343,7 @@ h4 {
 .sixthblockmenu {
 
     height: 338px;
-    border-bottom: border: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 .sixthblockmenu ul li {
@@ -446,6 +452,16 @@ h4 {
     height: 75px;
 }
 
-a::hover {
+a:hover {
     text-decoration: underline;
+    
+}
+
+.btn:hover{
+    top: 2px;
+    background-color: indigo;
+}
+.btn1:hover{
+    top: 2px;
+    background-color: indigo;
 }

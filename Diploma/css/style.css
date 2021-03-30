@@ -510,13 +510,7 @@ h3 {
     flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; } }
-
-@media all and (min-width: 280px) {
-  .refFooter {
-    max-width: 100%; } }
-
-@media all and (max-width: 1024px) {
+    align-items: center; }
   .firstBlockFirstSection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -524,3 +518,11 @@ h3 {
     flex-flow: column; }
     .firstBlockFirstSection li {
       padding: 10px; } }
+
+@media all and (min-width: 280px) {
+  .refFooter {
+    max-width: 100%; } }
+
+@media all and (max-width: 606px) {
+  .forthBlock {
+    min-height: 670px; } }

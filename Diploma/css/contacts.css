@@ -113,6 +113,8 @@ h3 {
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+    .firstBlock .firstBlockFirstSection a:actvisited {
+      background: #e8c300; }
   .firstBlock .firstBlockSecondSection {
     padding-top: 30px;
     padding-bottom: 30px; }

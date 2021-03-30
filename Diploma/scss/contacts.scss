@@ -80,7 +80,11 @@ h3 {
         padding: 40px 0;
         display: flex;
         justify-content: space-around;
+        & a:actvisited {
+            background: #e8c300;
+        }
     }
+
     .firstBlockSecondSection {
         padding-top: 30px;
         padding-bottom: 30px;
