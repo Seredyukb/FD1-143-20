@@ -20,7 +20,5 @@
    
    ----------------------JS----------------------
 1. 1 lesson JS
-   Anketa [Anketa](https://seredyukb.github.io/FD1-143-20JS/Lesson_1/anketa.html)
-
-
+   Anketa [Anketa](https://seredyukb.github.io/FD1-143-20/JS/Lesson_1/anketa.html)
 
