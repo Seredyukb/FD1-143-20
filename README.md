@@ -19,7 +19,8 @@
    Maket [Diploma](https://seredyukb.github.io/FD1-143-20/Diploma/index.html)
    
    ----------------------JS----------------------
-
+1. 1 lesson JS
+   Anketa [Anketa](https://seredyukb.github.io/FD1-143-20JS/Lesson_1/anketa.html)
 
 
 
