@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_3</title>
+</head>
+
+<body>
+    <script>
+        // Push
+        // UNshift
+        // Pop
+        // Shift
+        // console.log('У нас есть массив arr Имен семьи Середюк');
+        // var arr = ['Bogdan', 'Nadya', 'Lia'];
+        // console.log(arr);
+        // console.log('Добавим коробочку сладостей через команду PUSH в конец очереди');
+        // arr.push('Box');
+        // console.log('Теперь в конце очереди появилась коробочка ;) ');
+        // console.log(arr);
+        // console.log('Теперь добавим коробочку еще и в начале через команду UNSHIFT');
+        // arr.unshift('Box');
+        // console.log(arr);
+        // console.log('Дорогой массив в каких номерах лежит коробка?');
+        // console.log(arr.indexOf('Box'));
+        // console.log(arr.indexOf('Box', 1));
+        // console.log('Уберем коробочку в конце через команду POP');
+        // arr.pop();
+        // console.log(arr);
+        // console.log('Уберем коробочку в начале через команду SHIFT');
+        // arr.shift();
+        // console.log(arr);
+        // console.log('Разберем метод конкат для массива. Он создает копию нового + можно добавить элемент');
+        // var newArr = arr.concat('Федор');
+        // console.log(newArr);
+        // var newArr1 = newArr.slice(-2, -1); // копирует из массива элемнт и создает новый массив
+        // console.log(newArr1);
+        // var newArr2 = arr.splice(0, 1, 'Bodya'); // удаляет из массива элемент либо заменяет его
+        // console.log(newArr2);
+        // console.log(arr);
+        // // indexOf ищет нечто в массиве, возвращает индекс, если не нашел = -1.
+        // // // lastIndexOf то же самое, но с конца.
+        // // // includes результат тру или фолс, есть ли в массиве в принципе данное значение...
+        // console.log(arr.indexOf('Bodya'));
+
+
+        // var arr = ['Ann', 'BOgdan', 'Nadya'];
+        // console.log(arr);
+        // arr[1] = 'Bogdan';
+        // console.log(arr);
+        // arr.push('Lia');
+        // console.log(arr);
+        // arr.pop();
+        // console.log(arr);
+        // arr.unshift('Lia');
+        // console.log(arr);
+        // arr.shift();
+        // console.log(arr);
+        // arr.push('present');
+        // var newArr = ['Taras', 'Kristina', 'Yan'];
+        // console.log(newArr);
+        // var arrPresent = arr.splice(3, 1);
+        // // console.log(arrPresent);
+        // // newArr = newArr.concat(arrPresent);
+        // // console.log(newArr);
+        // var arr = [1, 22, 3, 4, 5, 7, 9, 0];
+        // arr.sort((a, b) => (a - b));
+        // console.log(arr);
+        // var arrWords = ['Ann', 'Bogdan', 'Color', 'Down'];
+        // arrWords.sort();
+        // console.log(arrWords);
+        // arrWords.unshift('Popular');
+        // console.log(arrWords);
+        // arrWords.sort();
+        // console.log(arrWords);
+        // var kvadrat = a => a * a;
+        // var b = 5;
+
+        // console.log(kvadrat(b));
+
+        // var funkcia = (a, b, c) => b * b - 4 * a * c;
+
+        // console.log(funkcia(1, 2, 3));
+
+        // // method map преобразовывает массив и возвращает значение согласно заданным параметрам, ниже пример:
+        // var arrExp = ['bla', 'blu', 'ble'];
+        // var result = arrExp.map(item => item[0]);
+        // console.log(result);
+
+        // //Split and join
+        // //Split в массив, join из массива в строку
+        // var arr = ['a', 'b', 'c', 'd'];
+        // var result = arr.join('')
+        // console.log(result);
+
+        // var newArr = 'a,b,c,d';
+        // var newResult = newArr.split(',');
+        // console.log(newResult);
+
+        //Array.isArray(arr) определяет массив это или нет
+
+        //         Создайте массив users с элементами "" и "".
+        // Добавьте "Оля" в конец.
+        // Замените значение в "" на "Петя".
+        // Ваш код для поиска значения должен
+        // // работать для массивов с любой длиной.
+        // // Удалите первый элемент массива и покажите его.
+        // // Вставьте "Маша" и "Паша" в начало массива.
+        // var users = ['Ваня', 'Иштван'];
+        // users.push('Оля');
+        // users.splice(1, 1, 'Петя');
+        // console.log(users);
+        // var newUser = users.splice(0, 1);
+        // console.log(newUser);
+        // console.log(users);
+        // users.unshift('Паша');
+        // users.unshift('Маша');
+        // console.log(users);
+        // // Задача №3.
+        // // Удалить элемент 'Иштван' и возвратить его в переменную
+        // let array1 = ['Ваня', 'Иштван', 'Оля',];
+        // var arrayNew = array1.splice(0, 1);
+        // console.log(array1, arrayNew);
+        // // Задача №4.
+        // //Сделать из строки массив
+        // let str = 'Ваня,Иштван,Оля';
+        // console.log(str.split(','));
+
+        // Чему равен previousValue в начале работы метода?
+        // let arrTwo = [9, 2, 8,];
+        // let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
+        //     console.log(previousValue);
+        // });
+        // Создать функцию по подсчету количества глассных в строке, которую вводит пользователь.
+        // а, у, о, ы, и, э, я, ю, ё, е - все глассные в русском языке.
+        var strUsr = prompt('Введите строку на русском языке, далее программа рассчитает количество глассных букв в введенной Вами строке');
+        function countVowels(a) {
+            let count = 0;
+            a = a.toLowerCase();
+            let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
+            for (let i = 0; i < a.length; i++) {
+                let c = a[i];
+                if (vowels.includes(c)) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(countVowels(strUsr));
+        "use strict";
+
+        // находим корни квадратного уравнения
+        // возвращает массив корней
+        function squareRoots(a, b, c) {
+            var d = b * b - 4 * a * c; // дискриминант
+
+            if (d < 0)
+                return []; // нет корней
+
+            if (d == 0)
+                return [-b / (2 * a)]; // один корень
+            if (a != 0) {
+                var x1 = (-b + Math.sqrt(d)) / (2 * a);
+                var x2 = (-b - Math.sqrt(d)) / (2 * a);
+                return [x1, x2]; // два корня
+            } else return [-c / b]
+        }
+
+        function ttt() {
+            var a = Number(prompt('Введите a'));
+            var b = Number(prompt('Введите b'));
+            var c = Number(prompt('Введите c'));
+            var roots = squareRoots(a, b, c);
+
+            if (!roots.length)
+                alert('корней нет!');
+            else if (roots.length == 1)
+                alert('один корень: ' + roots[0]);
+            else
+                alert('два корня: ' + roots[0] + ' и ' + roots[1]);
+        }
+
+
+        ttt();
+
+    </script>
+
+</body>
+
+</html>
