@@ -134,10 +134,14 @@
         // let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
         //     console.log(previousValue);
         // });
+        //For each, filter, reduce
+
+
+
         // Создать функцию по подсчету количества глассных в строке, которую вводит пользователь.
         // а, у, о, ы, и, э, я, ю, ё, е - все глассные в русском языке.
         var strUsr = prompt('Введите строку на русском языке, далее программа рассчитает количество глассных букв в введенной Вами строке');
-        function countVowels(a) {
+        function countVowels1(a) {
             let count = 0;
             a = a.toLowerCase();
             let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
@@ -149,7 +153,39 @@
             }
             return count;
         }
-        console.log(countVowels(strUsr));
+        console.log(countVowels1(strUsr));
+        //For each
+
+        function countVowels2(a) {
+            let count = 0;
+            a = a.toLowerCase();
+            a = a.split();
+            // let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
+            let vowels = 'ауоыиэяюёе';
+            a.forEach(function (elem) {
+                if (vowels.includes(elem)) {
+                    count++;
+                }
+
+
+            })
+            return count;
+        }
+
+        console.log(countVowels2(strUsr));
+
+        function countVowels3(a) {
+            a.split();
+            let vowels = 'ауоыиэяюёе';
+            let count = a.filter(elem => vowels.includes(elem)).length;
+            return count;
+        }
+
+        console.log(countVowels3(strUsr));
+
+
+
+
         "use strict";
 
         // находим корни квадратного уравнения
