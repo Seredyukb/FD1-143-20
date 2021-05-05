@@ -27,3 +27,6 @@
    TreeSum [TreeSum](https://seredyukb.github.io/FD1-143-20/JS/Lesson_2/index.html)
    
 
+
+   3 lesson JS
+   Array Methods [ArrMethods](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/index.html)
