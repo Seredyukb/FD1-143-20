@@ -155,39 +155,37 @@
         }
         console.log(countVowels1(strUsr));
         //For each
-
         function countVowels2(a) {
             let count = 0;
             a = a.toLowerCase();
-            a = a.split();
-            // let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
-            let vowels = 'ауоыиэяюёе';
+            a = a.split('');
+            let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
             a.forEach(function (elem) {
                 if (vowels.includes(elem)) {
                     count++;
                 }
-
-
             })
             return count;
         }
-
         console.log(countVowels2(strUsr));
-
+        // Filter
         function countVowels3(a) {
-            a.split();
-            let vowels = 'ауоыиэяюёе';
+            a = a.toLowerCase();
+            a = a.split('');
+            let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
             let count = a.filter(elem => vowels.includes(elem)).length;
             return count;
         }
-
         console.log(countVowels3(strUsr));
-
-
-
-
-       
-
+        // reduce
+        function countVowels4(a) {
+            a = a.toLowerCase();
+            a = a.split('');
+            let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
+            let result = arr.reduce(elem => vowels.includes(elem), 0);
+            return result;
+        }
+        console.log(countVowels2(strUsr));
     </script>
 
 </body>
