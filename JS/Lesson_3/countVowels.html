@@ -182,10 +182,15 @@
             a = a.toLowerCase();
             a = a.split('');
             let vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
-            let result = arr.reduce(elem => vowels.includes(elem), 0);
-            return result;
+            let count = 0;
+            let result = a.reduce(function (elem) {
+                if (vowels.includes(elem)) {
+                    count++;
+                }
+            });
+            return count;
         }
-        console.log(countVowels2(strUsr));
+        console.log(countVowels4(strUsr));
     </script>
 
 </body>

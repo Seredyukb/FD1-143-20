@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+
+<body>
+    <!-- <input type="button" value="Push me" onclick="dateOnClick()"> -->
+    <!-- <script>
+        // var startTime = new Date();
+        // function dateOnClick(a) {
+        //     var opr = new Date();
+        //     alert('Прошло секунд с момента нажатия открытия страницы и нажатия на кнопку' + (opr - startTime) / 1000);
+        // }
+        // function Car(carColor, carSpeed) {
+        //     this.color = carColor;
+        //     this.speed = carSpeed;
+        //     this.setColor = function setColor(carColor) {
+        //         return
+        //     }
+        //     console.log('Цвет авто + ' + this.color + 'Максимальная скорость + ' + this.speed);
+        // }
+        // var volvo = new Car('red', 120);
+
+
+        // class sportCar {
+        //     constructor(carNum, carColor) {
+        //         this.num = carNum;
+        //         this.color = carColor;
+
+        //     }
+        // }
+        // var ferrari = new sportCar('1374 CX-7', 'black')
+        // console.log(ferrari);
+
+
+        // function Human() {
+        //     var self = this;
+        //     self.race = null;
+        //     self.height = null;
+        //     self.weight = null;
+
+        //     self.setRace = function (_race) {
+        //         self.race = _race;
+        //     }
+        //     self.setHeight = function (_height) {
+        //         self.height = _height;
+        //     }
+        //     self.setWeight = function (_weight) {
+        //         self.weight = _weight;
+        //     }
+        //     self.roar = function (params) {
+        //         console.log('ARrrrrrrrrrrrrr!!!');
+        //     }
+        //     self.talk = function () {
+        //         console.log('Bla-bla-bla');
+        //     }
+        //     self.show = function () {
+        //         console.log('Race of this human is ' + self.race + '\n' +
+        //             'Height of this human is ' + self.height + '\n' +
+        //             'Weight of this human is ' + self.weight
+
+
+        //         );
+        //     }
+        // }
+        // var vasya = new Human();
+        // console.log(Human);
+        // vasya.setRace('european');
+        // vasya.setHeight('175 cm');
+        // vasya.setWeight('60 kilo');
+        // vasya.roar();
+        // vasya.talk();
+        // vasya.show();
+
+        // var human = {
+        //     name: 'Bogdan',
+        //     id: 1,
+        //     race: 'european',
+        // };
+        // console.log(human);
+        // var a = Object.entries(human);
+        // console.log(a);
+        // console.log(human.name);
+
+
+
+        "use strict";
+
+        // var values=[55,77,55,66,77];
+        // var used = { la: 1, 2: 2, 55: 0, 4: 55 }; // ключ хэша - число, которое уже встречалось
+        // for ( var i=0; i<values.length; i++ ) {
+        //     var value=values[i]; // очередное значение
+        //     if ( value in used ) // встречалось ли оно?
+        //         continue; // если да - всё, берём следующее
+        //     used[value]=true; // если нет - запоминаем, что это значение уже встречалось
+        //     console.log(value); // выводим его в консоль
+        // }
+        // console.log(used);
+
+        // console.log(used.la);
+
+    </script> -->
+    <script>
+        // Доработать проект MOOD (слайды N.10) так, чтобы цвета не повторялись.
+        // Для контроля повторения цветов использовать хэш.
+        "use strict";
+
+        function randomDiap(n, m) {
+            return Math.floor(Math.random() * (m - n + 1)) + n;
+        }
+
+        function mood(colorsCount) {
+            var colors = ['', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый'];
+            var used = {};
+            console.log('цветов: ' + colorsCount);
+            for (var i = 1; i <= colorsCount; i++) {
+                var n = randomDiap(1, 7);
+                var colorName = colors[n];
+                if (colorName in used)
+                    continue;
+                used[colorName] = true;
+                console.log(colorName);
+            }
+        }
+
+        mood(3);
+    </script>
+</body>
+
+</html>
