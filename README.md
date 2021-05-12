@@ -28,6 +28,8 @@
    
 
 
-   3 lesson JS
-   Array Methods [ArrMethods](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/countVowels.html)
+   3 lesson JS Array Methods
+   countVowels [countVowels](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/countVowels.html)
+   squareRoots [squareRoots](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/squareRoots.html)
+   
 
