@@ -32,4 +32,7 @@
    countVowels [countVowels](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/countVowels.html)
    squareRoots [squareRoots](https://seredyukb.github.io/FD1-143-20/JS/Lesson_3/squareRoots.html)
    
+   4 lesson JS Mood, OOP
+   Mood [Mood](https://seredyukb.github.io/FD1-143-20/JS/Lesson_4/Mood.html)
+   
 
