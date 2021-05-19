@@ -114,11 +114,11 @@
             return Math.floor(Math.random() * (m - n + 1)) + n;
         }
 
-        function mood(colorsCount) {
+        function mood2(colorsCount) {
             var colors = ['', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый'];
             var used = {};
             console.log('цветов: ' + colorsCount);
-            for (var i = 1; i <= colorsCount; i++) {
+            for (var i = 1; Object.keys(used).length < colorsCount; i = i + 1) {
                 var n = randomDiap(1, 7);
                 var colorName = colors[n];
                 if (colorName in used)
@@ -127,8 +127,52 @@
                 console.log(colorName);
             }
         }
+        function mood(colorsCount) {
+            var used = {};
+            var colors = ['красный', '', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый'];
+            console.log('цветов: ' + colorsCount);
+            while (Object.keys(used).length < colorsCount) {
+                var n = randomDiap(0, 7);
+                var colorName = colors[n];
 
+                if (colorName == '') {
+                    continue;
+                }
+
+
+                if (colorName in used)
+                    continue;
+                used[colorName] = true;
+                console.log(colorName);
+            }
+            return used;
+        }
         mood(3);
+        function moodTest() {
+
+            for (let index = 0; index <= 100; index++) {
+                let used = mood(3);
+                if (Object.keys(used).length !== 3) {
+                    console.log('Ошибка, в ХЭШе used значений не 3, а = ' + Object.keys(used).length);
+                    break;
+                }
+
+                //проверка уникальности
+                var proverka = new Set();
+
+                for (let index = 0; index < Object.keys(used).length; index++) {
+                    var colorArray = Object.keys(used);
+                    var color = colorArray[index];
+                    proverka.add(color);
+
+                }
+                if (proverka.size !== Object.keys(used).length) {
+                    console.log('Не все элементы ХЭШа уникальны');
+                    break;
+                }
+            }
+            alert('Ошибок нет!');
+        }
     </script>
 </body>
 
