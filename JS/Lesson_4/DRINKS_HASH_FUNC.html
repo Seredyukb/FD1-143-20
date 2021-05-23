@@ -39,8 +39,8 @@ getKeys() — возвращает массив, состоящий из одн�
 <body>
     <input type="button" value="Ввод информации о напитке" onclick="vvodInfo()">
     <input type="button" value="получение информации о напитке" onclick="vivodInfo()">
-    <input type="button" value="удаление информации о напитке">
-    <input type="button" value="перечень всех напитков">
+    <input type="button" value="удаление информации о напитке" onclick="delInfo()">
+    <input type="button" value="перечень всех напитков" onclick="listNap()">
     <script>
         "use strict";
         function HashStorageFunc() {
@@ -52,10 +52,14 @@ getKeys() — возвращает массив, состоящий из одн�
                 return this.storage[key];
             }
             this.deleteValue = function (key) {
-                delete storage[key];
+                if (key in this.storage) {
+                    delete this.storage[key];
+                    return true;
+                }
+                return false;
             }
             this.getKeys = function () {
-                return Object.keys(storage);
+                return Object.keys(this.storage);
             }
         }
         var drinkStorage = new HashStorageFunc();
@@ -68,36 +72,34 @@ getKeys() — возвращает массив, состоящий из одн�
             drinkStorage.addValue(n, { alco: aA, rec: r });
             // for ( var k in friend )
             // console.log( k + ' / ' + friend[k] );
-            console.log(drinkStorage.storage);
+            console.log(drinkStorage.getValue(n));
         }
         var vivodInfo = function () {
             var nap = prompt('Введите наименование напитка о котором Вы хотите узнать');
-            if (nap in drinkStorage.storage) {
+            var que = drinkStorage.getValue(nap);
+            console.log(que);
+            if (que !== undefined) {
                 alert(
                     'Напиток ' + nap + '\n' +
-                    'Алкогольный ' + drinkStorage.storage + '\n'
-
+                    'Алкогольный ' + que.alco + '\n' +
+                    "Рецепт: " + que.rec + '\n'
                 );
             } else {
                 alert('Такого напитка в базе нет');
             }
         }
 
+        var delInfo = function () {
+            var nap = prompt('Введите название напитка, который хотите удалить');
+            var del = drinkStorage.deleteValue(nap);
 
+            alert(del ? "Напиток удален!" : "Такого напитка нет в базе");
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        var listNap = function () {
+            var list = drinkStorage.getKeys();
+            alert("Список: " + list);
+        }
     </script>
 </body>
 
