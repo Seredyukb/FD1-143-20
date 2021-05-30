@@ -35,6 +35,10 @@
    4 lesson JS Mood, OOP
    Mood [Mood](https://seredyukb.github.io/FD1-143-20/JS/Lesson_4/Mood.html)
    DRINKS_HASH_FUNC [DRINKS_HASH_FUNC](https://seredyukb.github.io/FD1-143-20/JS/Lesson_4/DRINKS_HASH_FUNC.html)
+   
+   5 lesson DYN_FORM
+   DYN_FORM [DYN_FORM](https://seredyukb.github.io/FD1-143-20/JS/Lesson_5/index.html)
+  
 
    
 
