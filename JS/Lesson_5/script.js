@@ -72,7 +72,7 @@ function createForm(data, forma) {
                 label.textContent = formElem.label;
                 var select = doc.createElement('select');
                 select.name = formElem.name;
-                selectBar = formElem.variants;
+                var selectBar = formElem.variants;
                 for (let q = 0; q < selectBar.length; q++) {
                     var selectItem = selectBar[q];
                     var option = doc.createElement('option');
@@ -89,7 +89,7 @@ function createForm(data, forma) {
                 label.textContent = formElem.label;
                 forma.appendChild(label);
                 var radioVariants = formElem.variants;
-                for (let z = 0; index < radioVariants.length; z++) {
+                for (let z = 0; z < radioVariants.length; z++) {
                     var radioItem = radioVariants[z];
                     var input = doc.createElement('input');
                     var subLabel = doc.createElement('label');
