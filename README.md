@@ -42,6 +42,9 @@
    6 lesson DRAG'n'DROP
    DRAG'n'DROP [DRAG'n'DROP](https://seredyukb.github.io/FD1-143-20/JS/Lesson_6/index.html)
 
+   6 lesson Clock_dom
+   Clock_dom [Clock_dom](https://seredyukb.github.io/FD1-143-20/JS/Lesson_7/Clock_dom/index.html)
+
 
    
 
