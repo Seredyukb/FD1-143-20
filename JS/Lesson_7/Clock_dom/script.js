@@ -116,4 +116,4 @@ function getTime() {
 var step = function () {
     setTimeout(getTime, 1000);
 }
-step(getTime);
+step();
