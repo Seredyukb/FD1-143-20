@@ -1,0 +1,13 @@
+#hhand {
+    transform-origin: 50% 50%;
+}
+#mhand {
+    transform-origin: 50% 50%;
+}
+#shand {
+    transform-origin: 50% 50%;
+}
+#timer {
+    font-size: 35px;
+    font-family: "Gill Sans", sans-serif;
+}

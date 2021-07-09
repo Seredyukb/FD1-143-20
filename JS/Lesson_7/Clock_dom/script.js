@@ -110,10 +110,11 @@ function getTime() {
     electrClock.innerText = `${hours}:${minutes}:${seconds}`;
     //requestAnimationFrame(getTime);
     step(getTime);
+    console.log(1);
 }
 
 //requestAnimationFrame(getTime);
-var step = function () {
+function step() {
     setTimeout(getTime, 1000);
 }
-step();
+
