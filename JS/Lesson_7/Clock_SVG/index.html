@@ -8,16 +8,17 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body onload="setTime()">
+<body onload="getTime()">
     <svg id='clock' width=440 height=440 xmlns='http://www.w3.org/2000/svg'>
-        <circle id='circleEl' cx='100px' cy='100px' r='100px' fill='#fcca66'></circle>
-        <text id='timer' x='100px' y='75px'></text>
-        <g id='numbers'>
-            <line id="hourArrow" x1='100px' y1='100px' x2='100px' y2='50px' stroke-width='7px' stroke='black'
+        <circle id='circleEl' cx='220' cy='220' r='220' stroke='#fcca66' fill='#fcca66' />
+        <text id='timer' x='160' y='150'></text>
+        <g id='numbers'></g>
+        <g>
+            <line id="hourArrow" x1='220px' y1='220px' x2='220px' y2='110px' stroke-width='7px' stroke='black'
                 stroke-linecap='round'></line>
-            <line id="minuteArrow" x1='100px' y1='100px' x2='100px' y2='35px' stroke-width='5px' stroke='black'
+            <line id="minuteArrow" x1='220px' y1='220px' x2='220px' y2='90px' stroke-width='5px' stroke='black'
                 stroke-linecap='round'></line>
-            <line id="secondArrow" x1='100px' y1='100px' x2='100px' y2='15px' stroke-width='3px' stroke='black'
+            <line id="secondArrow" x1='220px' y1='220px' x2='220px' y2='70px' stroke-width='3px' stroke='black'
                 stroke-linecap='round'></line>
         </g>
     </svg>

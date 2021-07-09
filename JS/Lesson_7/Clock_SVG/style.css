@@ -1,10 +1,10 @@
-#hhand {
+#hourArrow {
     transform-origin: 50% 50%;
 }
-#mhand {
+#minuteArrow {
     transform-origin: 50% 50%;
 }
-#shand {
+#secondArrow {
     transform-origin: 50% 50%;
 }
 #timer {
