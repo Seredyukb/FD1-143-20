@@ -47,6 +47,8 @@
    
    Clock_SVG [Clock_SVG](https://seredyukb.github.io/FD1-143-20/JS/Lesson_7/Clock_SVG/index.html)
    
+   Clock_canvas [Clock_canvas](https://seredyukb.github.io/FD1-143-20/JS/Lesson_7/Clock_canvas/index.html)
+   
    
   
 
