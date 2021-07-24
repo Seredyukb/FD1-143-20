@@ -50,6 +50,12 @@
    Clock_canvas [Clock_canvas](https://seredyukb.github.io/FD1-143-20/JS/Lesson_7/Clock_canvas/index.html)
    
    
+   
+   Diploma
+   Diploma_quizz_app_Interview [Diploma_quizz_app_Interview](https://seredyukb.github.io/FD1-143-20/JS/Diploma_quizz_app_Interview/index.html)
+   
+   
+   
   
 
    
